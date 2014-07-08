@@ -1,5 +1,3 @@
-from re import sub
-
 from django.db import models
 
 
@@ -15,6 +13,12 @@ class Exhibition(models.Model):
 		ordering = ['-begin']
 		verbose_name = 'Выставка'
 		verbose_name_plural = 'Выставки'
+
+	def save(self):
+		if self.showroom_url:
+			if self.showroom_url[:4] != 'http':
+				self.showroom_url = 'http://' + self.showroom_url
+		super(Exhibition, self).save()
 	
 	def __str__(self):
 			return (self.title)
