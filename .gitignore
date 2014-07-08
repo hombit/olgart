@@ -52,3 +52,9 @@ coverage.xml
 # Sphinx documentation
 docs/_build/
 
+# Secrets
+secrets.json
+
+# Temporary files
+*.swp
+*~
