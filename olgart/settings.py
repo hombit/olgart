@@ -38,6 +38,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+	'exhibitions',	
 )
 
 MIDDLEWARE_CLASSES = (
@@ -53,6 +54,21 @@ ROOT_URLCONF = 'olgart.urls'
 
 WSGI_APPLICATION = 'olgart.wsgi.application'
 
+TEMPLATE_DIRS = (
+	os.path.realpath(os.path.dirname(__file__)) + '/templates/',
+)
+
+TEMPLATE_CONTEXT_PROCESSORS = (
+	"django.contrib.auth.context_processors.auth",
+	"django.core.context_processors.debug",
+	"django.core.context_processors.i18n",
+	"django.core.context_processors.media",
+    'django.core.context_processors.request',
+	"django.core.context_processors.static",
+	"django.core.context_processors.tz",
+	"django.contrib.messages.context_processors.messages"
+)
+
 
 # Database
 # https://docs.djangoproject.com/en/1.6/ref/settings/#databases
@@ -67,9 +83,9 @@ DATABASES = {
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ru-ru'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Europe/Moscow'
 
 USE_I18N = True
 
@@ -80,5 +96,11 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
-
+STATICFILES_DIRS = (
+	os.path.join(BASE_DIR, 'static'),
+)
 STATIC_URL = '/static/'
+
+# Uploaded Media:
+MEDIA_ROOT = os.path.join(BASE_DIR, 'static/media')
+MEDIA_URL = '/static/media/'

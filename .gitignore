@@ -58,3 +58,7 @@ secrets.json
 # Temporary files
 *.swp
 *~
+
+# Static files
+db.sqlite3
+/static/media/

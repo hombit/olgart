@@ -1,0 +1,9 @@
+{% for exh in object_list %}
+	{{ exh.begin }} &mdash; {{ exh.end }}: &laquo;{{ exh.title }}&raquo; в
+	{% if exh.showroom_url %}
+		<a href="{{ exh.showroom_url }}">{{ exh.showroom }}</a>
+	{% else %}
+		{{ exh.showroom }}
+	{% endif %}
+	<br />
+{% endfor %}
