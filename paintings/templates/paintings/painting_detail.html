@@ -1,0 +1,7 @@
+{% load i18n %}
+
+<img src="{{ painting.image.url }}" width=800 />
+<br /><br />
+{% trans painting.title as title %}
+{% trans painting.surface as surface %}
+<b>{{ title|capfirst }}</b> {{ surface|capfirst }}, {% trans painting.material %}, {{ painting.height }}x{{ painting.width }}

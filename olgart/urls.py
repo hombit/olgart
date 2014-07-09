@@ -10,6 +10,7 @@ urlpatterns = patterns('',
     # url(r'^$', 'olgart.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
 	url( r'^exhibitions/', include('exhibitions.urls') ),
+	url( r'^galleries/', include('paintings.urls') ),
 
     url( r'^admin/', include(admin.site.urls) ),
 )

@@ -1,0 +1,6 @@
+{% load i18n %}
+
+{% for paint in object_list %}
+	<a href="{{ paint.get_absolute_url }}"><img src="{{ paint.image_small.url }}" /></a>
+	<br /><br />
+{% endfor %}
