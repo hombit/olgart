@@ -40,6 +40,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
 	'exhibitions',	
+	'paintings',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -70,6 +71,9 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 	"django.core.context_processors.tz",
 	"django.contrib.messages.context_processors.messages"
 )
+
+
+THUMBNAIL_SIZE = (300,300)
 
 
 # Database

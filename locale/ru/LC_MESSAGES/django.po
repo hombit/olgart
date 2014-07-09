@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-07-09 08:51+0000\n"
+"POT-Creation-Date: 2014-07-09 11:27+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -28,10 +28,46 @@ msgstr "&laquo;%(title)s&raquo;"
 msgid "in exhibit-hall"
 msgstr "в выставочном зале"
 
-#: olgart/settings.py:101
+#: olgart/settings.py:105
 msgid "Russian"
 msgstr "Русский"
 
-#: olgart/settings.py:102
+#: olgart/settings.py:106
 msgid "English"
 msgstr "Английский"
+
+#: paintings/models.py:27
+msgid "canvas"
+msgstr "холст"
+
+#: paintings/models.py:28
+msgid "wood panel"
+msgstr "оргалит"
+
+#: paintings/models.py:29
+msgid "cardboard"
+msgstr "картон"
+
+#: paintings/models.py:30
+msgid "paper"
+msgstr "бумага"
+
+#: paintings/models.py:33
+msgid "oil"
+msgstr "масло"
+
+#: paintings/models.py:34
+msgid "gouache"
+msgstr "гуашь"
+
+#: paintings/models.py:35
+msgid "water-colour"
+msgstr "акварель"
+
+#: paintings/models.py:36
+msgid "ink"
+msgstr "тушь"
+
+#: paintings/models.py:37
+msgid "pencil"
+msgstr "карандаш"
