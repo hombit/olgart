@@ -1,7 +1,8 @@
 {% load i18n %}
 
 {% for exh in object_list %}
-{{ exh.begin }} &mdash; {{ exh.end }} &laquo;{% trans exh.title %}&raquo; {% trans "in exhibit-hall" %}
+{% trans exh.title as title %}
+{{ exh.begin }} &mdash; {{ exh.end }} {% blocktrans %}"{{ title }}"{% endblocktrans %} {% trans "in exhibit-hall" %}
 	{% if exh.showroom_url %}
 		<a href="{{ exh.showroom_url }}">{% trans exh.showroom %}</a>
 	{% else %}

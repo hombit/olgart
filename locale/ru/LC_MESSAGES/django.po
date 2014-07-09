@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-07-09 07:23+0000\n"
+"POT-Creation-Date: 2014-07-09 08:51+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,7 +19,12 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-#: exhibitions/templates/exhibitions/exhibition_list.html:4
+#: exhibitions/templates/exhibitions/exhibition_list.html:5
+#, python-format
+msgid "\"%(title)s\""
+msgstr "&laquo;%(title)s&raquo;"
+
+#: exhibitions/templates/exhibitions/exhibition_list.html:5
 msgid "in exhibit-hall"
 msgstr "в выставочном зале"
 
