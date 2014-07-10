@@ -11,8 +11,7 @@ class ExhibitionAdmin(TranslationAdmin):
 		(
 			None, {
 				'fields': (
-					('begin',
-					'end',),
+					('begin', 'end',),
 					'title',
 					'showroom',
 					'showroom_url',
