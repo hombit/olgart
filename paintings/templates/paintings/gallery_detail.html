@@ -5,9 +5,9 @@
 {% block content %}
 	<div class="container">
 		<div class="row">
-			{% for paint in object_list %}
+			{% for painting in paintings %}
 				<div class="col-md-4">
-					<a href="{{ paint.get_absolute_url }}"><img src="{{ paint.image_small.url }}" /></a>
+					<a href="{{ painting.get_absolute_url }}"><img src="{{ painting.image_small.url }}" /></a>
 				</div>
 			{% endfor %}
 		</div>
