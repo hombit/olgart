@@ -1,12 +1,21 @@
+{% extends 'base.html' %}
+
 {% load i18n %}
 
-{% for exh in object_list %}
-	{% trans exh.title as title %}
-	{{ exh.begin }} &mdash; {{ exh.end }} {% blocktrans %}"{{ title }}"{% endblocktrans %} {% trans "in exhibit-hall" %}
-	{% if exh.showroom_url %}
-		<a href="{{ exh.showroom_url }}">{% trans exh.showroom %}</a>
-	{% else %}
-		{% trans exh.showroom %}
-	{% endif %}
-	<br />
-{% endfor %}
+{% block content %}
+	<div class="container">
+		<ul>
+			{% for exh in object_list %}
+				<li>
+				{% trans exh.title as title %}
+				{{ exh.begin }} &mdash; {{ exh.end }} {% blocktrans %}"{{ title }}"{% endblocktrans %} {% trans "in exhibit-hall" %}
+				{% if exh.showroom_url %}
+					<a href="{{ exh.showroom_url }}">{% trans exh.showroom %}</a>
+				{% else %}
+					{% trans exh.showroom %}
+				{% endif %}
+				</li>
+			{% endfor %}
+		</ol>
+	</div>
+{% endblock %}
