@@ -1,5 +1,0 @@
-{% load i18n %}
-
-{% for gallery in galleries %}
-	<li {% if gallery.get_absolute_url in request.path %}class="active"{% endif %}><a href="{{ gallery.get_absolute_url }}">{% trans gallery.title %}</a></li>
-{% endfor %}
