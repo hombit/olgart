@@ -9,9 +9,31 @@ class GalleryAdmin(TranslationAdmin):
 
 
 class PaintingAdmin(TranslationAdmin):
-	list_display = ('title','get_img_tag_for_admin','gallery','is_sold',)
-	list_editable = ('is_sold',)
+	fieldsets = [
+		(
+			None, {
+				'fields' : (
+					'gallery',
+					'title',
+					('surface', 'material',),
+					('height', 'width',),
+					'is_sold',
+					'image',
+				)
+			}
+		),
+	]
+
+	list_display = ('title','get_img_tag_for_admin','gallery','is_sold','position',)
+	list_editable = ('is_sold','position',)
 	list_filter = ('gallery','is_sold',)
+
+	class Media:
+		js = (
+			'http://yandex.st/jquery/2.1.1/jquery.min.js',
+			'http://yandex.st/jquery-ui/1.10.4/jquery-ui.min.js',
+			'js/admin-list-reorder.js',
+		)
 
 
 admin.site.register(Gallery, GalleryAdmin)

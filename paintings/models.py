@@ -54,10 +54,12 @@ class Painting(models.Model):
 	)
 	height = models.IntegerField( "Высота", help_text="в см" )	
 	width = models.IntegerField( "Ширина", help_text="в см" )
-	image = models.ImageField( help_text="только jpg", max_length=500, upload_to='images/paintings/' )
+	image = models.ImageField( "Файл с картинкой", help_text="только jpg", max_length=500, upload_to='images/paintings/' )
 	image_small = models.ImageField( editable=False, max_length=500, upload_to='images/paintings/' )
+	position = models.IntegerField( "Положение", blank=True, null=True )
 
 	class Meta:
+		ordering = ('position',)
 		verbose_name = "Картина"
 		verbose_name_plural = "Картины"
 
@@ -82,7 +84,15 @@ class Painting(models.Model):
 		self.image_small.save( '%s_small.%s'%(os.path.splitext(suf.name)[0],FILE_EXTENSION), suf, save=False )
 
 	def save(self):
+		if self.position == None:
+			try:
+				last = self.__class__.objects.order_by('-position')[0]
+				self.position = last.position + 1
+			except IndexError:
+				self.position = 0
+
 		self.produce_image_small()
+
 		super(Painting, self).save()
 
 	def __str__(self):

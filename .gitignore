@@ -61,4 +61,4 @@ secrets.json
 
 # Static files
 db.sqlite3
-/static/media/
+/static/media
