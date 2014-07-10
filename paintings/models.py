@@ -10,13 +10,25 @@ from PIL import Image
 
 class Gallery(models.Model):
 	title = models.CharField( "Название", help_text="Одно слово", max_length=128 )
+	position = models.IntegerField( "Положение", blank=True, null=True )
 	
 	class Meta:
+		ordering = ('position',)
 		verbose_name = 'Галерея'
 		verbose_name_plural = 'Галереи'
 	
 	def get_absolute_url(self):
 		return ( '/galleries/' + self.title_en + '/' )
+
+	def save(self):
+		if self.position == None:
+			try:
+				last = self.__class__.objects.order_by('-position')[0]
+				self.position = last.position + 1
+			except IndexError:
+				self.position = 0
+				
+		super(Gallery, self).save()
 
 	def __str__(self):
 		return (self.title)

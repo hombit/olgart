@@ -5,7 +5,25 @@ from paintings.models import Gallery, Painting
 
 
 class GalleryAdmin(TranslationAdmin):
-	pass
+	fieldsets = [
+		(
+			None, {
+				'fields' : (
+					'title',
+				)
+			}
+		)
+	]
+
+	list_display = ( 'title', 'position', )
+	list_editable = ( 'position', )
+
+	class Media:
+		js = (
+			'http://yandex.st/jquery/2.1.1/jquery.min.js',
+			'http://yandex.st/jquery-ui/1.10.4/jquery-ui.min.js',
+			'js/admin-list-reorder.js',
+		)
 
 
 class PaintingAdmin(TranslationAdmin):
