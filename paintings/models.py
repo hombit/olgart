@@ -39,7 +39,7 @@ class Painting(models.Model):
 
 	gallery = models.ForeignKey( 'Gallery', verbose_name='Галерея' )
 	is_sold = models.BooleanField( "Продана", default=False )
-	title = models.CharField( "Название", max_length=256 )
+	title = models.CharField( "Название", unique=True, max_length=256 )
 	surface = models.CharField(
 		"поверхность",
 		max_length=32,
