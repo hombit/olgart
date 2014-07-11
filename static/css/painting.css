@@ -1,3 +1,6 @@
+#view{
+	padding-bottom: 20px;
+}
 td{
 	border: thin groove transparent;
 	border-collapse: collapse;
@@ -15,4 +18,7 @@ td{
 }
 .painting-table{
 	width: 90%;
+}
+.painting-description{
+	margin-top: 15px;
 }

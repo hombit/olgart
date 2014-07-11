@@ -7,14 +7,15 @@
 {% endblock %}
 
 {% block content %}
-	<div class="container" id="view">
+	<div id="view"></div>
+	<div class="container">
 		<div class="painting-table">
 		<table>
 			<tr>
 				{% if previous_painting.get_absolute_url %}
 					<td id="left">
 						<span class="glyphicon glyphicon-chevron-left"></span>
-						<div id="url-left" hidden>{{ previous_painting.get_absolute_url }}</div>
+						<div id="url-left" hidden>{{ previous_painting.get_absolute_url }}#view</div>
 					</td>
 					{% else %}
 					<td>
@@ -23,25 +24,36 @@
 					{% endif %}
 				<td>
 					{% if next_painting.get_absolute_url %}
-						<a href="{{ next_painting.get_absolute_url }}"><img src="{{ painting.image.url }}" class="painting-image" /></a>
+						<a href="{{ next_painting.get_absolute_url }}#view"><img src="{{ painting.image.url }}" class="painting-image" /></a>
 					{% else %}
 						<img src="{{ painting.image.url }}" class="painting-image" />
 					{% endif %}
 				</td>
-				<td id="right">
 					{% if next_painting.get_absolute_url %}
+						<td id="right">
 						<span class="glyphicon glyphicon-chevron-right"></span>
-						<div id="url-right" hidden>{{ next_painting.get_absolute_url }}</div>
+						<div id="url-right" hidden>{{ next_painting.get_absolute_url }}#view</div>
+						</td>
+					{% else %}
+						<td>
+						</td>
 					{% endif %}
-				</td>
 			</tr>
 			<tr>
 				<td>
 				</td>
-				<td>	
-					{% trans painting.title as title %}
-					{% trans painting.surface as surface %}
-					<b>{{ title|capfirst }}</b> {{ surface|capfirst }}, {% trans painting.material %}, {{ painting.width }}x{{ painting.height }}
+				<td>
+					<h4 class="painting-description">	
+						{% trans painting.title as title %}
+						{% trans painting.surface as surface %}
+						{% blocktrans with t=title|capfirst %}<b>"{{ t }}"</b>{% endblocktrans %}
+						{{ surface|capfirst }}, {% trans painting.material %}.
+						{{ painting.width }}x{{ painting.height }} {% trans "cm" %}
+						{% if painting.is_sold %}
+							<br />
+							{% trans "In a private collection" %}
+						{% endif %}
+					</h4>
 				</td>
 				<td>
 				</td>
