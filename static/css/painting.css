@@ -2,7 +2,7 @@
 	padding-bottom: 20px;
 }
 td{
-	border: thin groove transparent;
+	border: thin solid transparent;
 	border-collapse: collapse;
 //	border-collapse: separate;
 //	border-radius: 4px 4px 4px 4px;
