@@ -6,9 +6,8 @@ admin.autodiscover()
 
 
 urlpatterns = patterns('',
-    # Examples:
-    # url(r'^$', 'olgart.views.home', name='home'),
-    # url(r'^blog/', include('blog.urls')),
+	url(r'^$', 'olgart.views.index', name='index'),
+	
 	url( r'^exhibitions/', include('exhibitions.urls') ),
 	url( r'^galleries/', include('paintings.urls') ),
 

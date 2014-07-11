@@ -71,6 +71,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 	"django.core.context_processors.tz",
 	"django.contrib.messages.context_processors.messages",
 	"paintings.processors.get_Galleries",
+	"paintings.processors.get_random_canvasOilPainting",
 )
 
 

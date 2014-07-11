@@ -49,11 +49,12 @@
 						{% blocktrans with t=title|capfirst %}<b>"{{ t }}"</b>{% endblocktrans %}
 						{{ surface|capfirst }}, {% trans painting.material %}.
 						{{ painting.width }}x{{ painting.height }} {% trans "cm" %}
-						{% if painting.is_sold %}
-							<br />
-							{% trans "In a private collection" %}
-						{% endif %}
 					</p>
+						{% if painting.is_sold %}
+							<p class="painting-description">	
+								{% trans "In a private collection" %}
+							</p>
+						{% endif %}
 				</td>
 				<td>
 				</td>

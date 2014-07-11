@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+
+{% block extrahead %}
+	<link href="{{STATIC_URL}}css/index.css" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4">
+				<div class="rand_image">
+					<img src="{{ rand_painting.image_small.url }}" width={{ rand_painting.image_small.width }} height={{ rand_painting.image_small.height }} class="rand_image_img" />
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="aboutme">
+					<h2>{% trans "About me" %}</h2>
+					<p>
+						{% blocktrans %}
+							My name is Olga Malancheva, I'm artist. Bring to your attention some of my works (landscapes, portraits, still lifes). I am a member of the International Art Fund, Artists  Union of Russia. My works are in various galleries, in private collections in Russia and other countries. I participate in exhibitions and held five personal. My artworks published in the album "The names in the Art of Russia". I would be very grateful if you take a moment and leave comment in the "guest book". Write me if you want to order a picture or to get something from presented.
+						{% endblocktrans %}
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}
