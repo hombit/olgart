@@ -34,7 +34,7 @@ class PaintingAdmin(TranslationAdmin):
 					'gallery',
 					'title',
 					('surface', 'material',),
-					('height', 'width',),
+					('width', 'height',),
 					'is_sold',
 					'image',
 				)
