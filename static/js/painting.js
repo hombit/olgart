@@ -36,13 +36,20 @@ $( document ).keydown( function(e){
 		case $.ui.keyCode.LEFT:
 			$("td#left").click();
 			break;
+		case 65: // A
+			$("td#left").click();
+			break;
 		case 72: // H
 			$("td#left").click();
 			break;
 		case 75: // K
 			$("td#left").click();
 			break;
+
 		case $.ui.keyCode.RIGHT:
+			$("td#right").click();
+			break;
+		case 68: // D
 			$("td#right").click();
 			break;
 		case 76: // L
