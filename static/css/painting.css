@@ -1,0 +1,18 @@
+td{
+	border: thin groove transparent;
+	border-collapse: collapse;
+//	border-collapse: separate;
+//	border-radius: 4px 4px 4px 4px;
+}
+.glyphicon{
+	font-size: 20px;
+	color: #888888;
+	margin-left:20px;
+	margin-right: 20px;
+}
+.painting-image{
+	width: 100%;
+}
+.painting-table{
+	width: 90%;
+}

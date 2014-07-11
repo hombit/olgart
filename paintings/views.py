@@ -15,3 +15,11 @@ class GalleryDetailView(DetailView):
 
 class PaintingDetailView(DetailView):
 	model = Painting
+
+	def get_context_data(self, **kwargs):
+		context = super(PaintingDetailView, self).get_context_data(**kwargs)
+		painting = context['object']
+		paintings = Painting.objects.filter(gallery=painting.gallery).exclude(position=painting.position)
+		context['previous_painting'] = paintings.order_by('-position').extra(where=['position < %s'], params=[painting.position]).first()
+		context['next_painting'] = paintings.order_by('position').extra(where=['position > %s'], params=[painting.position]).first()
+		return context
