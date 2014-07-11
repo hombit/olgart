@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-07-11 14:55+0000\n"
+"POT-Creation-Date: 2014-07-11 19:12+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -28,11 +28,11 @@ msgstr "&laquo;%(title)s&raquo;"
 msgid "in exhibit-hall"
 msgstr "в выставочном зале"
 
-#: olgart/settings.py:106
+#: olgart/settings.py:107
 msgid "Russian"
 msgstr "Русский"
 
-#: olgart/settings.py:107
+#: olgart/settings.py:108
 msgid "English"
 msgstr "Английский"
 
@@ -55,6 +55,27 @@ msgstr "Выставки"
 #: olgart/templates/base.html:75
 msgid "All rights reserved, Olga Malancheva"
 msgstr "Все права защищены, Ольга Маланчева"
+
+#: olgart/templates/index.html:19
+msgid "About me"
+msgstr "Обо мне"
+
+#: olgart/templates/index.html:21
+msgid ""
+"\n"
+"\t\t\t\t\t\t\tMy name is Olga Malancheva, I'm artist. Bring to your "
+"attention some of my works (landscapes, portraits, still lifes). I am a "
+"member of the International Art Fund, Artists  Union of Russia. My works are "
+"in various galleries, in private collections in Russia and other countries. "
+"I participate in exhibitions and held five personal. My artworks published "
+"in the album \"The names in the Art of Russia\". I would be very grateful if "
+"you take a moment and leave comment in the \"guest book\". Write me if you "
+"want to order a picture or to get something from presented.\n"
+"\t\t\t\t\t\t"
+msgstr ""
+"\n"
+"\t\t\t\t\t\t\tМеня зовут Ольга Маланчева, я &mdash; художник. Предлагаю Вашему вниманию ряд моих работ (живопись и графика). Я являюсь членом Международного Художественного фонда и Профессионального Союза художников. Мои работы находятся в различных галереях и выставочных залах, в частных коллекциях в России и за рубежом. Участвую в выставках, провела пять персональных. Публикации в каталогах &laquo;Имена в искусстве России&raquo;, газетах &laquo;Наш изограф&raquo;, &laquo;Тверская,13&raquo;, журналах &laquo;Питомец&raquo;, &laquo;Мир животных&raquo;. Участник Международного конкурса им.В.Попкова. Призер ежегодных Весенних салонов Творческого объединения женщин-художников &laquo;Ирида&raquo;. Буду очень признательна, если Вы уделите минутку и оставите отзыв в &laquo;гостевой&raquo;. Если у Вас появилось желание заказать картину или купить что-нибудь из представленного &mdash; пишите.\n"
+"\t\t\t\t\t\t"
 
 #: paintings/models.py:39
 msgid "canvas"
@@ -101,6 +122,6 @@ msgstr "<b>&laquo;%(t)s&raquo;</b>"
 msgid "cm"
 msgstr "см"
 
-#: paintings/templates/paintings/painting_detail.html:54
+#: paintings/templates/paintings/painting_detail.html:55
 msgid "In a private collection"
 msgstr "Находится в частной коллекции"
