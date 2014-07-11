@@ -43,7 +43,7 @@
 				<td>
 				</td>
 				<td>
-					<h4 class="painting-description">	
+					<p class="painting-description">	
 						{% trans painting.title as title %}
 						{% trans painting.surface as surface %}
 						{% blocktrans with t=title|capfirst %}<b>"{{ t }}"</b>{% endblocktrans %}
@@ -53,7 +53,7 @@
 							<br />
 							{% trans "In a private collection" %}
 						{% endif %}
-					</h4>
+					</p>
 				</td>
 				<td>
 				</td>
