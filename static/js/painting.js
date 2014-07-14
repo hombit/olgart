@@ -8,10 +8,12 @@ $("td#left")
 		$(this).css("border-left-color", "#e7e7e7");
 		$(this).css("border-top-color", "#e7e7e7");
 		$(this).css("border-bottom-color", "#e7e7e7");
+		$(this).css("cursor", "pointer");
 	} )
 	.mouseleave( function(){
 		$(this).css("background-color", "transparent");
 		$(this).css("border-color", "transparent");
+		$(this).css("cursor", "default");
 	} );
 
 
@@ -25,10 +27,12 @@ $("td#right")
 		$(this).css("border-right-color", "#e7e7e7");
 		$(this).css("border-top-color", "#e7e7e7");
 		$(this).css("border-bottom-color", "#e7e7e7");
+		$(this).css("cursor", "pointer");
 	} )
 	.mouseleave( function(){
 		$(this).css("background-color", "transparent");
 		$(this).css("border-color", "transparent");
+		$(this).css("cursor", "default");
 	} );
 
 $( document ).keydown( function(e){
