@@ -10,7 +10,7 @@ class Exhibition(models.Model):
 	image = models.ImageField( "Картинка", blank=True, null=True, max_length=500, upload_to="images/exhibitions/" )
 
 	class Meta:
-		ordering = ['-begin']
+		ordering = ['-end']
 		verbose_name = 'Выставка'
 		verbose_name_plural = 'Выставки'
 
