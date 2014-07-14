@@ -62,6 +62,8 @@
 					</li>
 					{% url 'exhibitions' as url_ %}
 					<li {% if url_ in request.path %}class="active"{% endif %} ><a href="{{ url_ }}">{% trans "Exhibitions" %}</a></li>
+					{% url 'feedback' as url_ %}
+					<li {% if url_ in request.path %}class="active"{% endif %} ><a href="{{ url_ }}">{% trans "Feedback" %}</a></li>
 				</ul>
 			</div>
 		</div>
