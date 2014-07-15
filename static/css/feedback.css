@@ -4,3 +4,6 @@ p.feedback-writehere{
 .feedback-old{
 	margin-top: 50px;
 }
+p.feedback-old-title{
+	font-size: 135%;
+}
