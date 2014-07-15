@@ -52,7 +52,7 @@
 			</div>
 			<div class="collapse navbar-collapse">
 				<ul class="nav navbar-nav">
-					<li class="dropdown">
+					<li class="dropdown{% for gallery in galleries %}{% if gallery.get_absolute_url in request.path %} active{% endif %}{% endfor %}">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">{% trans "Galleries" %} <span class="caret"></span></a>
 						<ul class="dropdown-menu" role="menu">
 							{% for gallery in galleries %}
