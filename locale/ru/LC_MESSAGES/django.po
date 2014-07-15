@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-07-14 16:20+0000\n"
+"POT-Creation-Date: 2014-07-15 10:51+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -63,6 +63,10 @@ msgstr "Все права защищены, Ольга Маланчева"
 #: olgart/templates/feedback.html:11
 msgid "Please write your feedback about my works"
 msgstr "Пожалуйста, напишите, что вы думаете о моих работах"
+
+#: olgart/templates/feedback.html:16
+msgid "Messages from old version of this site:"
+msgstr "Сообщения, оставленные на предыдущей версии сайта:"
 
 #: olgart/templates/index.html:19
 msgid "About me"
