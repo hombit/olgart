@@ -1,3 +1,6 @@
-p.writehere{
+p.feedback-writehere{
 	font-size: 135%;
+}
+.feedback-old{
+	margin-top: 50px;
 }

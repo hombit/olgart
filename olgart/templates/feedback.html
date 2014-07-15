@@ -8,8 +8,14 @@
 
 {% block content %}
 	<div class="container">
-		<p class="writehere">{% trans "Please write your feedback about my works" %}</p>
+		<p class="feedback-writehere">{% trans "Please write your feedback about my works" %}</p>
 		<div id="kament_comments"></div>
+	</div>
+	<div class="feedback-old">
+		<div class="container">
+			<p class="feedback-old-title">{% trans "Messages from old version of this site:" %}</p>
+			{% include "feedback-from-old-site.html" %}
+		</div>
 	</div>
 {% endblock %}
 
