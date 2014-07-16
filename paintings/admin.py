@@ -27,6 +27,7 @@ class GalleryAdmin(TranslationAdmin):
 
 
 class PaintingAdmin(TranslationAdmin):
+	readonly_fields = ('get_img_tag_for_admin',)
 	fieldsets = [
 		(
 			None, {
@@ -36,7 +37,7 @@ class PaintingAdmin(TranslationAdmin):
 					('surface', 'material',),
 					('width', 'height',),
 					'is_sold',
-					'image',
+					('image', 'get_img_tag_for_admin'),
 				)
 			}
 		),
