@@ -79,7 +79,10 @@ class Painting(models.Model):
 		return ( "{}{}/".format(self.gallery.get_absolute_url(), self.id) )
 
 	def get_img_tag_for_admin(self):
-		return ( u'<img src="{}{}" height="75" />'.format(settings.MEDIA_URL,self.image_small) )
+		if self.image_small:
+			return ( u'<img src="{}{}" height="75" />'.format(settings.MEDIA_URL,self.image_small) )
+		else:
+			return ''
 	get_img_tag_for_admin.allow_tags=True
 	get_img_tag_for_admin.short_description="Картина"
 
