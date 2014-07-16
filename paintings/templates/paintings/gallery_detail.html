@@ -14,7 +14,7 @@
 		<div class="row" align="center">
 			{% for painting in paintings %}
 				<div class="col-md-4">
-					<a href="{{ painting.get_absolute_url }}"><img src="{{ painting.image_small.url }}" width="{{ painting.image_small.width }}" height="{{ painting.image_small.height }}" class="gallery-image" /></a>
+					<a href="{{ painting.get_absolute_url }}"><img src="{{ painting.image_small.url }}" class="gallery-image" /></a>
 				</div>
 			{% endfor %}
 		</div>
