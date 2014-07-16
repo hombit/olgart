@@ -1,0 +1,20 @@
+body{
+	padding-bottom: 20px;
+	padding-top: 20px;
+}
+.footer{
+	padding-top: 20px;
+	padding-bottom: 20px;
+	margin-top: 40px;
+	border-top: 1px solid #eee;
+}
+.navbar{
+	margin-bottom: 20px;
+}
+.language-buttom{
+	background-color: transparent;
+	text-decoration: underline;
+	border: none;
+	cursor: pointer;
+}
+
