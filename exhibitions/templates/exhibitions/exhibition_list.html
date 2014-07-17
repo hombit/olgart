@@ -1,21 +1,26 @@
 {% extends 'base.html' %}
 
 {% load i18n %}
+{% block extrahead %}
+	<link href="{{ STATIC_URL }}css/exhibition.css" rel="stylesheet">
+{% endblock %}
 
 {% block content %}
 	<div class="container">
-		<ul>
-			{% for exh in object_list %}
-				<li>
-				{% trans exh.title as title %}
-				{{ exh.begin }} &mdash; {{ exh.end }} {% blocktrans %}"{{ title }}"{% endblocktrans %} {% trans "in exhibit-hall" %}
-				{% if exh.showroom_url %}
-					<a href="{{ exh.showroom_url }}">{% trans exh.showroom %}</a>
-				{% else %}
-					{% trans exh.showroom %}
-				{% endif %}
-				</li>
-			{% endfor %}
-		</ol>
+ 		{% for exh in object_list %} 
+			{% if exh.image %} 
+				<img src="{{ exh.image.url }}" class="exhibition-image" />  
+			{% endif %}			 
+			<p>
+ 				{% trans exh.title as title %} 
+ 				{% trans exh.showroom as showroom %} 
+				&bull; {{ exh.begin }} &mdash; {{ exh.end }} {% blocktrans %}"{{ title }}"{% endblocktrans %} {% trans "in exhibit-hall" %} 
+				{% if exh.showroom_url %} 
+					<a href="{{ exh.showroom_url }}">{{ showroom }}</a> 
+				{% else %} 
+					{{ showroom }} 
+				{% endif %} 
+			</p>
+ 		{% endfor %} 
 	</div>
 {% endblock %}
