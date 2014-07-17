@@ -47,6 +47,7 @@ class Painting(models.Model):
 		("water-colour", _("water-colour")),
 		("ink", _("ink")),
 		("pencil", _("pencil")),
+		("tempera", _("tempera")),
 	)
 
 	gallery = models.ForeignKey( 'Gallery', verbose_name='Галерея' )
