@@ -22,6 +22,7 @@ class GalleryAdmin(TranslationAdmin):
 		js = (
 			'http://yandex.st/jquery/2.1.1/jquery.min.js',
 			'http://yandex.st/jquery-ui/1.10.4/jquery-ui.min.js',
+			'js/jquery.ui.touch-punch.min.js',
 			'js/admin-list-reorder.js',
 		)
 
@@ -52,6 +53,7 @@ class PaintingAdmin(TranslationAdmin):
 		js = (
 			'http://yandex.st/jquery/2.1.1/jquery.min.js',
 			'http://yandex.st/jquery-ui/1.10.4/jquery-ui.min.js',
+			'js/jquery.ui.touch-punch.min.js',
 			'js/admin-list-reorder.js',
 		)
 
