@@ -67,6 +67,7 @@ class Painting(models.Model):
 	)
 	height = models.IntegerField( "Высота", help_text="в см" )	
 	width = models.IntegerField( "Ширина", help_text="в см" )
+	year = models.IntegerField( "Год написания", help_text="4 цифры" )
 	image = models.ImageField( "Файл с картинкой", help_text="только jpg", max_length=500, upload_to='images/paintings/' )
 	image_small = models.ImageField( editable=False, max_length=500, upload_to='images/paintings/' )
 	position = models.IntegerField( "Положение", blank=True, null=True )

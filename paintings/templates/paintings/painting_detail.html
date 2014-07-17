@@ -46,8 +46,8 @@
 					<p class="painting-description">	
 						{% trans painting.title as title %}
 						{% trans painting.surface as surface %}
-						{% blocktrans with t=title|capfirst %}<b>"{{ t }}"</b>{% endblocktrans %}
-						{{ surface|capfirst }}, {% trans painting.material %}.
+						{% blocktrans with t=title|capfirst %}<strong>"{{ t }}"</strong>{% endblocktrans %}
+						{{ surface|capfirst }}, {% trans painting.material %}, {{ painting.year }}.
 						{{ painting.width }}x{{ painting.height }} {% trans "cm" %}
 					</p>
 						{% if painting.is_sold %}

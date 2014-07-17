@@ -36,6 +36,7 @@ class PaintingAdmin(TranslationAdmin):
 					'title',
 					('surface', 'material',),
 					('width', 'height',),
+					'year',
 					'is_sold',
 					('image', 'get_img_tag_for_admin'),
 				)

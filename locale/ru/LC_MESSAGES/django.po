@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-07-17 11:00+0000\n"
+"POT-Creation-Date: 2014-07-17 11:28+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -143,13 +143,13 @@ msgstr "темпера"
 
 #: paintings/templates/paintings/painting_detail.html:49
 #, python-format
-msgid "<b>\"%(t)s\"</b>"
-msgstr "<b>&laquo;%(t)s&raquo;</b>"
+msgid "<strong>\"%(t)s\"</strong>"
+msgstr "<strong>&laquo;%(t)s&raquo;</strong>"
 
-#: paintings/templates/paintings/painting_detail.html:51
+#: paintings/templates/paintings/painting_detail.html:52
 msgid "cm"
 msgstr "см"
 
-#: paintings/templates/paintings/painting_detail.html:55
+#: paintings/templates/paintings/painting_detail.html:56
 msgid "In a private collection"
 msgstr "Находится в частной коллекции"
