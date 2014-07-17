@@ -82,7 +82,7 @@ class Painting(models.Model):
 
 	def get_img_tag_for_admin(self):
 		if self.image_small:
-			return ( u'<img src="{}{}" height="75" />'.format(settings.MEDIA_URL,self.image_small) )
+			return ( u'<img src="{}" height="75" />'.format(self.image_small.url) )
 		else:
 			return ''
 	get_img_tag_for_admin.allow_tags=True
