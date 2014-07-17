@@ -1,6 +1,11 @@
 {% extends 'base.html' %}
 
 {% load i18n %}
+
+{% block extratitle %}
+	{% trans "Exhibitions" %} :  
+{% endblock %}
+
 {% block extrahead %}
 	<link href="{{ STATIC_URL }}css/exhibition.css" rel="stylesheet">
 {% endblock %}

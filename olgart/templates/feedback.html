@@ -2,6 +2,10 @@
 
 {% load i18n %}
 
+{% block extratitle %}
+	{% trans "Feedback" %} : 
+{% endblock %}
+
 {% block extrahead %}
 	<link href="{{STATIC_URL}}css/feedback.css" rel="stylesheet">
 {% endblock %}

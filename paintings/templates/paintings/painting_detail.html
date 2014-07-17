@@ -2,6 +2,11 @@
 
 {% load i18n %}
 
+{% block extratitle %}
+	{% trans painting.title as title %}
+	{% blocktrans %}"{{title}}"{% endblocktrans %} : 
+{% endblock %}
+
 {% block extrahead %}
 	<link href="{{STATIC_URL}}css/painting.css" rel="stylesheet">
 {% endblock %}
