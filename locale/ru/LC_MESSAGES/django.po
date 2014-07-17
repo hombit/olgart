@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-07-15 10:51+0000\n"
+"POT-Creation-Date: 2014-07-17 11:00+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,12 +19,12 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-#: exhibitions/templates/exhibitions/exhibition_list.html:11
+#: exhibitions/templates/exhibitions/exhibition_list.html:14
 #, python-format
 msgid "\"%(title)s\""
 msgstr "&laquo;%(title)s&raquo;"
 
-#: exhibitions/templates/exhibitions/exhibition_list.html:11
+#: exhibitions/templates/exhibitions/exhibition_list.html:14
 msgid "in exhibit-hall"
 msgstr "в выставочном зале"
 
@@ -40,23 +40,23 @@ msgstr "Английский"
 msgid "Artist Olga Malancheva"
 msgstr "Художница Ольга Маланчева"
 
-#: olgart/templates/base.html:45
+#: olgart/templates/base.html:24
 msgid "Olga Malancheva"
 msgstr "Ольга Маланчева"
 
-#: olgart/templates/base.html:56
+#: olgart/templates/base.html:35
 msgid "Galleries"
 msgstr "Галереи"
 
-#: olgart/templates/base.html:64
+#: olgart/templates/base.html:43
 msgid "Exhibitions"
 msgstr "Выставки"
 
-#: olgart/templates/base.html:66
+#: olgart/templates/base.html:45
 msgid "Feedback"
 msgstr "Гостевая книга"
 
-#: olgart/templates/base.html:77
+#: olgart/templates/base.html:73
 msgid "All rights reserved, Olga Malancheva"
 msgstr "Все права защищены, Ольга Маланчева"
 
@@ -136,6 +136,10 @@ msgstr "тушь"
 #: paintings/models.py:49
 msgid "pencil"
 msgstr "карандаш"
+
+#: paintings/models.py:50
+msgid "tempera"
+msgstr "темпера"
 
 #: paintings/templates/paintings/painting_detail.html:49
 #, python-format
