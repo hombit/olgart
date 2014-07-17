@@ -108,6 +108,13 @@ class Painting(models.Model):
 			except IndexError:
 				self.position = 0
 
+		try:
+			this = Painting.objects.get(id=self.id)
+			if this.image != self.image:
+				this.image.delete(save=False)
+		except:
+			pass
+
 		self.produce_image_small()
 
 		super(Painting, self).save()
