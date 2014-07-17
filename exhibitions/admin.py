@@ -5,8 +5,8 @@ from exhibitions.models import Exhibition
 
 
 class ExhibitionAdmin(TranslationAdmin):
-	list_filter = ['begin']
-	
+	readonly_fields = ('get_img_tag_for_admin',)
+
 	fieldsets = [
 		(
 			None, {
@@ -15,11 +15,13 @@ class ExhibitionAdmin(TranslationAdmin):
 					'title',
 					'showroom',
 					'showroom_url',
-					'image',
+					('image','get_img_tag_for_admin'),
 				)
 			}
 		),
 	]
+
+	list_filter = ['begin','end']
 
 
 admin.site.register(Exhibition, ExhibitionAdmin)

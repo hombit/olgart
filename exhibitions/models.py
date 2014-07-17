@@ -14,10 +14,26 @@ class Exhibition(models.Model):
 		verbose_name = 'Выставка'
 		verbose_name_plural = 'Выставки'
 
+	def get_img_tag_for_admin(self):
+		if self.image:
+			return ( u'<img src="{}" height="75" />'.format(self.image.url) )
+		else:
+			return ''
+	get_img_tag_for_admin.allow_tags=True
+	get_img_tag_for_admin.short_description="Картинка"
+
 	def save(self):
 		if self.showroom_url:
 			if self.showroom_url[:4] != 'http':
 				self.showroom_url = 'http://' + self.showroom_url
+		
+		try:
+			this = Exhibition.objects.get(id=self.id)
+			if this.image != self.image:
+				this.image.delete(save=False)
+		except:
+			pass
+
 		super(Exhibition, self).save()
 	
 	def __str__(self):
