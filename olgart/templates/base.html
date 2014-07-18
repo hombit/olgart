@@ -74,7 +74,15 @@
 
 <div class="container">
 	<div class="footer">
-		<p>&copy; {% now 'Y' %} {% trans "All rights reserved, Olga Malancheva" %}</p>
+		<table width=100%>
+			<tr>
+				<td>
+		&copy; {% now 'Y' %} {% trans "All rights reserved, Olga Malancheva" %}
+				</td>
+				{% block extrafooter %}
+				{% endblock %}
+			</tr>
+		</table>
 	</div>
 </div>
 

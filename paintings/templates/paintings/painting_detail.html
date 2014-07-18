@@ -69,6 +69,12 @@
 	</div>
 {% endblock %}
 
+{% block extrafooter %}
+	<td class="turning-over-info">
+		{% trans "Use keyboard arrow keys &larr; and &rarr; to turning over the paintings" %}
+	</td>
+{% endblock %}
+
 {% block extrafoot %}
 	<script src="{{STATIC_URL}}js/painting.js" type="text/javascript"></script>
 {% endblock %}

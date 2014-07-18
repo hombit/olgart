@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-07-17 13:36+0000\n"
+"POT-Creation-Date: 2014-07-18 08:05+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -58,7 +58,7 @@ msgstr "Галереи"
 msgid "Feedback"
 msgstr "Гостевая книга"
 
-#: olgart/templates/base.html:77
+#: olgart/templates/base.html:80
 msgid "All rights reserved, Olga Malancheva"
 msgstr "Все права защищены, Ольга Маланчева"
 
@@ -155,3 +155,7 @@ msgstr "см"
 #: paintings/templates/paintings/painting_detail.html:60
 msgid "In a private collection"
 msgstr "Находится в частной коллекции"
+
+#: paintings/templates/paintings/painting_detail.html:74
+msgid "Use keyboard arrow keys &larr; and &rarr; to turning over the paintings"
+msgstr "Используйте клавиши &larr; и &rarr; на клавиатуре для пролистывания картин"
