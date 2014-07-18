@@ -77,10 +77,17 @@
 		<table width=100%>
 			<tr>
 				<td>
-		&copy; {% now 'Y' %} {% trans "All rights reserved, Olga Malancheva" %}
+					&copy; {% now 'Y' %} {% trans "All rights reserved, Olga Malancheva. E-mail: " %}{{ "malanchev@mail.ru"|urlize }}
 				</td>
 				{% block extrafooter %}
 				{% endblock %}
+			</tr>
+			<tr>
+				<td>
+					{% blocktrans %}
+						Made by <a href="http://homb.it">Konstantin Malanchev.</a> Look at the source code on <a href="https://github.com/hombit/olgart">GitHub.</a>
+					{% endblocktrans %}
+				</td>
 			</tr>
 		</table>
 	</div>

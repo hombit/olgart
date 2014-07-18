@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-07-18 08:05+0000\n"
+"POT-Creation-Date: 2014-07-18 09:26+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -59,8 +59,20 @@ msgid "Feedback"
 msgstr "Гостевая книга"
 
 #: olgart/templates/base.html:80
-msgid "All rights reserved, Olga Malancheva"
-msgstr "Все права защищены, Ольга Маланчева"
+msgid "All rights reserved, Olga Malancheva. E-mail: "
+msgstr "Все права защищены, Ольга Маланчева. Электронная почта: "
+
+#: olgart/templates/base.html:87
+msgid ""
+"\n"
+"\t\t\t\t\t\tMade by <a href=\"http://homb.it\">Konstantin Malanchev.</a> "
+"Look at the source code on <a href=\"https://github.com/hombit/olgart\">GitHub.</a>\n"
+"\t\t\t\t\t"
+msgstr ""
+"\n"
+"\t\t\t\t\t\tСайт сделан <a href=\"http://homb.it\">Константином Малачневым.</a> "
+"Посмотрите исходный код на <a href=\"https://github.com/hombit/olgart\">ГитХабе.</a>\n"
+"\t\t\t\t\t"
 
 #: olgart/templates/feedback.html:15
 msgid "Please write your feedback about my works"
