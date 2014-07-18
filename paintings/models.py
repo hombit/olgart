@@ -3,6 +3,7 @@ import os.path
 from django.conf import settings
 from django.core.files.uploadedfile import SimpleUploadedFile
 from django.db import models
+from django.dispatch.dispatcher import receiver
 from django.utils.translation import ugettext_lazy as _
 from io import BytesIO
 from PIL import Image
@@ -121,3 +122,11 @@ class Painting(models.Model):
 
 	def __str__(self):
 		return (self.title)
+
+
+@receiver(models.signals.pre_delete, sender=Painting)
+def Painting_delete(sender, instance, **kwargs):
+	if instance.image:
+		instance.image.delete(save=False)
+	if instance.image_small:
+		instance.image_small.delete(save=False)
