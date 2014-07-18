@@ -70,7 +70,7 @@ msgid ""
 "\t\t\t\t\t"
 msgstr ""
 "\n"
-"\t\t\t\t\t\tСайт сделан <a href=\"http://homb.it\">Константином Малачневым.</a> "
+"\t\t\t\t\t\tСайт сделан <a href=\"http://homb.it\">Константином Маланчевым.</a> "
 "Посмотрите исходный код на <a href=\"https://github.com/hombit/olgart\">ГитХабе.</a>\n"
 "\t\t\t\t\t"
 
