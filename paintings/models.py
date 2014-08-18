@@ -4,6 +4,7 @@ from django.conf import settings
 from django.core.files.uploadedfile import SimpleUploadedFile
 from django.db import models
 from django.dispatch.dispatcher import receiver
+from django.utils.text import slugify
 from django.utils.translation import ugettext_lazy as _
 from io import BytesIO
 from PIL import Image
@@ -11,6 +12,7 @@ from PIL import Image
 
 class Gallery(models.Model):
 	title = models.CharField( "Название", help_text="Одно слово", max_length=128 )
+	slug = models.SlugField(max_length=128)
 	position = models.IntegerField( "Положение", blank=True, null=True )
 	
 	class Meta:
@@ -19,9 +21,11 @@ class Gallery(models.Model):
 		verbose_name_plural = 'Галереи'
 	
 	def get_absolute_url(self):
-		return ( '/galleries/' + self.title_en + '/' )
+		return ( '/galleries/' + self.slug + '/' )
 
 	def save(self):
+		self.slug = slugify(self.title_en)
+
 		if self.position == None:
 			try:
 				last = self.__class__.objects.order_by('-position')[0]
@@ -53,7 +57,7 @@ class Painting(models.Model):
 
 	gallery = models.ForeignKey( 'Gallery', verbose_name='Галерея' )
 	is_sold = models.BooleanField( "Продана", default=False )
-	title = models.CharField( "Название", unique=True, max_length=256 )
+	title = models.CharField( "Название", unique=True, max_length=128 )
 	surface = models.CharField(
 		"поверхность",
 		max_length=32,
@@ -71,6 +75,7 @@ class Painting(models.Model):
 	year = models.IntegerField( "Год написания", help_text="4 цифры" )
 	image = models.ImageField( "Файл с картинкой", help_text="только jpg", max_length=500, upload_to='images/paintings/' )
 	image_small = models.ImageField( editable=False, max_length=500, upload_to='images/paintings/' )
+	slug = models.SlugField(max_length=128)
 	position = models.IntegerField( "Положение", blank=True, null=True )
 
 	class Meta:
@@ -79,7 +84,7 @@ class Painting(models.Model):
 		verbose_name_plural = "Картины"
 
 	def get_absolute_url(self):
-		return ( "{}{}/".format(self.gallery.get_absolute_url(), self.id) )
+		return ( "{}{}/".format(self.gallery.get_absolute_url(), self.slug) )
 
 	def get_img_tag_for_admin(self):
 		if self.image_small:
@@ -102,6 +107,8 @@ class Painting(models.Model):
 		self.image_small.save( '%s_small.%s'%(os.path.splitext(suf.name)[0],FILE_EXTENSION), suf, save=False )
 
 	def save(self):
+		self.slug = slugify(self.title_en)
+
 		if self.position == None:
 			try:
 				last = self.__class__.objects.order_by('-position')[0]

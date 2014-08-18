@@ -7,6 +7,6 @@ admin.autodiscover()
 
 
 urlpatterns = patterns('',
-	url( r'^(?P<slug>\w+)/$', GalleryDetailView.as_view(), name='gallery' ),
-	url( r'^(?P<gallery>\w+)/(?P<pk>\d+)/$', PaintingDetailView.as_view() ),
+	url( r'^(?P<slug>[\w-]+)/$', GalleryDetailView.as_view(), name='gallery' ),
+	url( r'^(?P<gallery>\w+)/(?P<slug>[\w-]+)/$', PaintingDetailView.as_view() ),
 )
