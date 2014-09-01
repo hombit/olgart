@@ -14,17 +14,17 @@ class Gallery(models.Model):
 	title = models.CharField( "Название", help_text="Одно слово", max_length=128 )
 	slug = models.SlugField(max_length=128)
 	position = models.IntegerField( "Положение", blank=True, null=True )
-	
+
 	class Meta:
 		ordering = ('position',)
 		verbose_name = 'Галерея'
 		verbose_name_plural = 'Галереи'
-	
+
 	def get_absolute_url(self):
 		return ( '/galleries/' + self.slug + '/' )
 
 	def save(self):
-		self.slug = slugify(self.title_en)
+		self.slug = slugify(self.title_en)[:128]
 
 		if self.position == None:
 			try:
@@ -32,14 +32,14 @@ class Gallery(models.Model):
 				self.position = last.position + 1
 			except IndexError:
 				self.position = 0
-				
+
 		super(Gallery, self).save()
 
 	def __str__(self):
 		return (self.title)
 
 
-class Painting(models.Model): 
+class Painting(models.Model):
 	SURFACES = (
 		("canvas", _("canvas")),
 		("wood panel", _("wood panel")),
@@ -70,7 +70,7 @@ class Painting(models.Model):
 		choices=MATERIALS,
 		default=MATERIALS[0]
 	)
-	height = models.IntegerField( "Высота", help_text="в см" )	
+	height = models.IntegerField( "Высота", help_text="в см" )
 	width = models.IntegerField( "Ширина", help_text="в см" )
 	year = models.IntegerField( "Год написания", help_text="4 цифры" )
 	image = models.ImageField( "Файл с картинкой", help_text="только jpg", max_length=500, upload_to='images/paintings/' )
@@ -107,7 +107,7 @@ class Painting(models.Model):
 		self.image_small.save( '%s_small.%s'%(os.path.splitext(suf.name)[0],FILE_EXTENSION), suf, save=False )
 
 	def save(self):
-		self.slug = slugify(self.title_en)
+		self.slug = slugify(self.title_en)[:128]
 
 		if self.position == None:
 			try:
