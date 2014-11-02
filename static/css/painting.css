@@ -14,7 +14,7 @@ td{
 	margin-right: 20px;
 }
 .painting-image{
-	width: 100%;
+	max-width: 100%;
 	box-shadow: rgba(0,0,0,0.25) 0px 0px 12px;
 }
 .painting-table{

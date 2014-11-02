@@ -28,11 +28,7 @@
 					</td>
 					{% endif %}
 				<td>
-					{% if next_painting.get_absolute_url %}
-						<a href="{{ next_painting.get_absolute_url }}#view"><img src="{{ painting.image.url }}" class="painting-image" /></a>
-					{% else %}
-						<img src="{{ painting.image.url }}" class="painting-image" />
-					{% endif %}
+					{% if next_painting.get_absolute_url %}<a href="{{ next_painting.get_absolute_url }}#view">{% endif %}<img src="{{ painting.image.url }}" class="painting-image" />{% if next_painting.get_absolute_url %}</a>{% endif %}
 				</td>
 					{% if next_painting.get_absolute_url %}
 						<td id="right">

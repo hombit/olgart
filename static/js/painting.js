@@ -64,3 +64,15 @@ $( document ).keydown( function(e){
 			break;
 	}
 } );
+
+
+function fitPainting(){
+	var img = document.getElementsByClassName("painting-image")[0];
+	var max_Height = Math.round(window.innerHeight * 0.9);
+	if ( img.height > max_Height ){
+		img.width = Math.round(img.width / img.height * max_Height);
+		img.height = max_Height;
+	}
+}
+
+fitPainting();
