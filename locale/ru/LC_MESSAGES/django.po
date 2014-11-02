@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-07-18 13:28+0000\n"
+"POT-Creation-Date: 2014-11-02 20:46+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -34,11 +34,11 @@ msgstr "&laquo;%(title)s&raquo;"
 msgid "in exhibit-hall"
 msgstr "в выставочном зале"
 
-#: olgart/settings.py:107
+#: olgart/settings.py:112
 msgid "Russian"
 msgstr "Русский"
 
-#: olgart/settings.py:108
+#: olgart/settings.py:113
 msgid "English"
 msgstr "Английский"
 
@@ -84,11 +84,11 @@ msgstr "Пожалуйста, напишите, что вы думаете о м
 msgid "Messages from old version of this site:"
 msgstr "Сообщения, оставленные на предыдущей версии сайта:"
 
-#: olgart/templates/index.html:19
+#: olgart/templates/index.html:21
 msgid "About me"
 msgstr "Обо мне"
 
-#: olgart/templates/index.html:21
+#: olgart/templates/index.html:23
 msgid ""
 "\n"
 "\t\t\t\t\t\t\tMy name is Olga Malancheva, I'm artist. Bring to your "
@@ -117,43 +117,43 @@ msgstr ""
 "представленного &mdash; пишите.\n"
 "\t\t\t\t\t\t"
 
-#: paintings/models.py:39
+#: paintings/models.py:44
 msgid "canvas"
 msgstr "холст"
 
-#: paintings/models.py:40
+#: paintings/models.py:45
 msgid "wood panel"
 msgstr "оргалит"
 
-#: paintings/models.py:41
+#: paintings/models.py:46
 msgid "cardboard"
 msgstr "картон"
 
-#: paintings/models.py:42
+#: paintings/models.py:47
 msgid "paper"
 msgstr "бумага"
 
-#: paintings/models.py:45
+#: paintings/models.py:50
 msgid "oil"
 msgstr "масло"
 
-#: paintings/models.py:46
+#: paintings/models.py:51
 msgid "gouache"
 msgstr "гуашь"
 
-#: paintings/models.py:47
+#: paintings/models.py:52
 msgid "water-colour"
 msgstr "акварель"
 
-#: paintings/models.py:48
+#: paintings/models.py:53
 msgid "ink"
 msgstr "тушь"
 
-#: paintings/models.py:49
+#: paintings/models.py:54
 msgid "pencil"
 msgstr "карандаш"
 
-#: paintings/models.py:50
+#: paintings/models.py:55
 msgid "tempera"
 msgstr "темпера"
 
@@ -170,7 +170,20 @@ msgstr "см"
 msgid "In a private collection"
 msgstr "Находится в частной коллекции"
 
-#: paintings/templates/paintings/painting_detail.html:77
+#: paintings/templates/paintings/painting_detail.html:63
+msgid "To order a copy of the painting write"
+msgstr "Если вы хотите заказать копию картины, напишите мне письмо на адрес"
+
+#: paintings/templates/paintings/painting_detail.html:63
+#: paintings/templates/paintings/painting_detail.html:67
+msgid "or call"
+msgstr "или позвоните по номеру"
+
+#: paintings/templates/paintings/painting_detail.html:67
+msgid "To purchase the painting write"
+msgstr "Если вы хотите приобрести картину, напишите мне письмо на адрес"
+
+#: paintings/templates/paintings/painting_detail.html:84
 msgid "Use keyboard arrow keys &larr; and &rarr; to turning over the paintings"
 msgstr ""
 "Используйте клавиши &larr; и &rarr; на клавиатуре для пролистывания картин"

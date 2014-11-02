@@ -59,6 +59,13 @@
 							<p class="painting-description">	
 								{% trans "In a private collection" %}
 							</p>
+							<p class="painting-purchaseinfo">
+								{% trans "To order a copy of the painting write" %} <a href="mailto:buy@olgart.ru?subject={{ painting.title }}">buy@olgart.ru</a> {% trans "or call" %} +7 (495) 934-21-00
+							</p>
+						{% else %}
+							<p class="painting-purchaseinfo">
+								{% trans "To purchase the painting write" %} <a href="mailto:buy@olgart.ru?subject={{ painting.title }}">buy@olgart.ru</a> {% trans "or call" %} +7 (495) 934-21-00
+							</p>
 						{% endif %}
 				</td>
 				<td>
