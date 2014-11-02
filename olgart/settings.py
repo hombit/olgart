@@ -22,11 +22,11 @@ with open( os.path.join(BASE_DIR, 'secrets.json') ) as fh:
 	SECRET_KEY = json.load(fh)['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-TEMPLATE_DEBUG = True
+TEMPLATE_DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -120,9 +120,7 @@ LOCALE_PATHS = (
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
-STATICFILES_DIRS = (
-	os.path.join(BASE_DIR, 'static'),
-)
+STATIC_ROOT = 'static'
 STATIC_URL = '/static/'
 
 # Uploaded Media:
