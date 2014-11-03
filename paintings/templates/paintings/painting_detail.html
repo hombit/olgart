@@ -35,39 +35,30 @@
 						<span class="glyphicon glyphicon-chevron-right"></span>
 						<div id="url-right" hidden>{{ next_painting.get_absolute_url }}#view</div>
 						</td>
-					{% else %}
-						<td>
-						</td>
 					{% endif %}
 			</tr>
-			<tr>
-				<td>
-				</td>
-				<td>
-					<p class="painting-description">	
-						{% trans painting.title as title %}
-						{% trans painting.surface as surface %}
-						{% blocktrans with t=title|capfirst %}<strong>"{{ t }}"</strong>{% endblocktrans %}
-						{{ surface|capfirst }}, {% trans painting.material %}, {{ painting.year }}.
-						{{ painting.width }}x{{ painting.height }} {% trans "cm" %}
-					</p>
-						{% if painting.is_sold %}
-							<p class="painting-description">	
-								{% trans "In a private collection" %}
-							</p>
-							<p class="painting-purchaseinfo">
-								{% trans "To order a copy of the painting write" %} <a href="mailto:buy@olgart.ru?subject={{ painting.title }}">buy@olgart.ru</a> {% trans "or call" %} +7 (495) 934-21-00
-							</p>
-						{% else %}
-							<p class="painting-purchaseinfo">
-								{% trans "To purchase the painting write" %} <a href="mailto:buy@olgart.ru?subject={{ painting.title }}">buy@olgart.ru</a> {% trans "or call" %} +7 (495) 934-21-00
-							</p>
-						{% endif %}
-				</td>
-				<td>
-				</td>
-			</tr>
 		</table>
+		</div>
+		<div class="painting-text">
+			<p class="painting-description">	
+				{% trans painting.title as title %}
+				{% trans painting.surface as surface %}
+				{% blocktrans with t=title|capfirst %}<strong>"{{ t }}"</strong>{% endblocktrans %}
+				{{ surface|capfirst }}, {% trans painting.material %}, {{ painting.year }}.
+				{{ painting.width }}x{{ painting.height }} {% trans "cm" %}
+			</p>
+			{% if painting.is_sold %}
+				<p class="painting-description">	
+					{% trans "In a private collection" %}
+				</p>
+				<p class="painting-purchaseinfo">
+					{% trans "To order a copy of the painting write" %} <a href="mailto:buy@olgart.ru?subject={{ painting.title }}">buy@olgart.ru</a> {% trans "or call" %} +7&nbsp;(495)&nbsp;934&#8209;21&#8209;00
+				</p>
+			{% else %}
+				<p class="painting-purchaseinfo">
+					{% trans "To purchase the painting write" %} <a href="mailto:buy@olgart.ru?subject={{ painting.title }}">buy@olgart.ru</a> {% trans "or call" %} +7&nbsp;(495)&nbsp;934&#8209;21&#8209;00
+				</p>
+			{% endif %}
 		</div>
 	</div>
 {% endblock %}
