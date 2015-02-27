@@ -91,7 +91,7 @@ msgstr "Обо мне"
 #: olgart/templates/index.html:23
 msgid ""
 "\n"
-"\t\t\t\t\t\t\tMy name is Olga Malancheva, I'm artist. Bring to your "
+"\t\t\t\t\t\t\tMy name is Olga Malancheva, I'm an artist. Bring to your "
 "attention some of my works (landscapes, portraits, still lifes). I am a "
 "member of the International Art Fund, Artists  Union of Russia. My works are "
 "in various galleries, in private collections in Russia and other countries. "
