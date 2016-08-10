@@ -20,5 +20,5 @@ body{
 
 /* https://github.com/hombit/olgart/issues/1#issue-133919889 */
 .navbar-nav>li> {
-​  margin-bottom: -2px;
+	margin-bottom: -2px;
 }
