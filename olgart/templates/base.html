@@ -54,13 +54,13 @@
 					{% for language in languages %}
 						{% if language.code != CURRENT_LANGUAGE %}
 						<li>
-							<a>
+
 								<form action="{% url 'set_language' %}" method="post">
 									{% csrf_token %}
 									<input name="language" type="hidden" value="{{ language.code }}" />
 									<input type="submit" value="{{ language.name_local }}" class="language-buttom" />
 								</form>
-							</a>
+
 						</li>
 						{% endif %}
 					{% endfor %}
