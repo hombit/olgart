@@ -20,8 +20,8 @@ class GalleryAdmin(TranslationAdmin):
 
 	class Media:
 		js = (
-			'http://yandex.st/jquery/2.1.1/jquery.min.js',
-			'http://yandex.st/jquery-ui/1.10.4/jquery-ui.min.js',
+			'https://yandex.st/jquery/2.2.3/jquery.min.js',
+			'https://yandex.st/jquery-ui/1.11.2/jquery-ui.min.js',
 			'js/jquery.ui.touch-punch.min.js',
 			'js/admin-list-reorder.js',
 		)
@@ -51,8 +51,8 @@ class PaintingAdmin(TranslationAdmin):
 
 	class Media:
 		js = (
-			'http://yandex.st/jquery/2.1.1/jquery.min.js',
-			'http://yandex.st/jquery-ui/1.10.4/jquery-ui.min.js',
+			'https://yandex.st/jquery/2.2.3/jquery.min.js',
+			'https://yandex.st/jquery-ui/1.11.2/jquery-ui.min.js',
 			'js/jquery.ui.touch-punch.min.js',
 			'js/admin-list-reorder.js',
 		)
