@@ -56,8 +56,9 @@
 						<li>
 
 								<form action="{% url 'set_language' %}" method="post">
+																<a>
 									{% csrf_token %}
-							<a>
+
 									<input type="submit" value="{{ language.name_local }}" class="language-buttom" />
 			
 									<input name="language" type="hidden" value="{{ language.code }}" />
