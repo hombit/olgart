@@ -13,7 +13,7 @@ body{
 }
 .language-buttom{
 	background-color: transparent;
-	text-decoration: underline;
+	text-decoration: none;
 	border: none;
 	cursor: pointer;
 }
