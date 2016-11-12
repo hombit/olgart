@@ -17,12 +17,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 # See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-import json
-with open( os.path.join(BASE_DIR, 'secrets.json') ) as fh:
-	SECRET_KEY = json.load(fh)['SECRET_KEY']
+SECRET_KEY = os.environ['DJANGOSECRETKEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = bool( os.environ.get('DJANGODEBUG', False) )
 
 TEMPLATE_DEBUG = False
 
@@ -90,6 +88,8 @@ DATABASES = {
     'ENGINE': 'django.db.backends.postgresql_psycopg2',
     'NAME': 'olgart',
     'USER': 'olgart',
+    'HOST': 'db',
+    'PORT': 5432,
     }
 }
 
@@ -120,9 +120,9 @@ LOCALE_PATHS = (
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
-STATIC_ROOT = 'static'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
 
 # Uploaded Media:
-MEDIA_ROOT = os.path.join(BASE_DIR, 'static/media')
-MEDIA_URL = '/static/media/'
+MEDIA_ROOT = '/media'
+MEDIA_URL = '/media/'

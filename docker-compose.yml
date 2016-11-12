@@ -1,0 +1,41 @@
+version: '2'
+services:
+   db:
+     volumes:
+       - pgdata:/var/lib/postgresql/data
+     image: postgres
+     environment:
+       - POSTGRES_USER=olgart
+       - POSTGRES_DB=olgart
+
+   app:
+     build: ./src/
+     volumes:
+       - static:/static/:ro
+       - media:/media/
+       - ./olgart.json:/olgart.json:ro
+       - ./media:/media_backup:ro
+     ports:
+       - "8000:8000"
+     environment:
+       - DJANGODEBUG
+     env_file:
+       - secrets.env
+     depends_on:
+       - db
+   
+   proxy:
+     image: nginx
+     volumes:
+       - static:/static/:ro
+       - media:/media/:ro
+       - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+     ports:
+       - "8001:80"
+     depends_on:
+       - app
+
+volumes:
+   static:
+   media:
+   pgdata:

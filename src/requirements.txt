@@ -1,0 +1,5 @@
+Django==1.6.11
+Pillow
+django-modeltranslation
+psycopg2
+gunicorn
