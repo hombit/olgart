@@ -141,8 +141,20 @@ ENV/
 .ropeproject
 
 
+### Vim ###
+# swap
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
+# session
+Session.vim
+# temporary
+.netrwhist
+*~
+# auto-generated tag files
+tags
+
+
 ### My ### 
 secrets.env
 olgart.json
 media/
-.*.swp
