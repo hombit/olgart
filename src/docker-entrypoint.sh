@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if [ -z "$DJANGOSECRETKEY" ]; then
+    exit 1  
+fi
+
+
 python3 ./manage.py syncdb --noinput
 
 if [ -f /olgart.json ]; then
