@@ -145,3 +145,4 @@ ENV/
 secrets.env
 olgart.json
 media/
+.*.swp
