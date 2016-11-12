@@ -9,36 +9,35 @@ services:
        - POSTGRES_DB=olgart
 
    app:
-     build: ./src/
+     build: ./app/
      volumes:
-       - static:/static/:ro
-       - media:/media/
+       - static:/www/static/:ro
+       - media:/www/media/
        - ./olgart.json:/olgart.json:ro
        - ./media:/media_backup:ro
      ports:
        - "8000:8000"
      environment:
-       - DJANGODEBUG
+       - DJANGODEBUG=1
      env_file:
        - secrets.env
      depends_on:
        - db
    
    proxy:
-     image: umputun/nginx-le
+     build: ./proxy/
      volumes:
-       - static:/static/:ro
-       - media:/media/:ro
-       - ./nginx.conf:/etc/nginx/service.conf:ro
+       - static:/www/static/:ro
+       - media:/www/media/:ro
        - ssl:/etc/nginx/ssl
+       - letsencrypt:/etc/letsencrypt
      ports:
        - "80:80"
        - "443:443"
      environment:
-       - TZ=Russia/Moscow
-       - LETSENCRYPT=true
-       - LE_EMAIL=hombit@gmail.com
-       - LE_FQDN=olgart.ru
+       - TZ=Europe/Moscow
+       - LE_EMAIL=hombit@olgart.ru
+       - NGINX_HOST=olgart.ru
      depends_on:
        - app
 
@@ -47,3 +46,4 @@ volumes:
    media:
    pgdata:
    ssl:
+   letsencrypt:
