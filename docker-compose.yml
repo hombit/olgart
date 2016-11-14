@@ -15,10 +15,10 @@ services:
        - media:/www/media/
        - ./olgart.json:/olgart.json:ro
        - ./media:/media_backup:ro
-     ports:
-       - "8000:8000"
-     environment:
-       - DJANGODEBUG=1
+#     ports:
+#       - "8000:8000"
+#     environment:
+#       - DJANGODEBUG=1
      env_file:
        - secrets.env
      depends_on:
