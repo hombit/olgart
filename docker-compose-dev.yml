@@ -7,14 +7,14 @@ services:
      environment:
        - POSTGRES_USER=olgart
        - POSTGRES_DB=olgart
+     restart: always
 
    app:
      build: ./app/
      volumes:
        - static:/www/static/:ro
        - media:/www/media/
-       - ./olgart.json:/olgart.json:ro
-       - ./media:/media_backup:ro
+       - ./backup:/backup
      ports:
        - "8000:8000"
      environment:
@@ -23,14 +23,26 @@ services:
        - secrets.env
      depends_on:
        - db
-   
+     restart: always
+
+   backup:
+     build: ./app/
+     volumes:
+       - media:/www/media/:ro
+       - ./backup:/backup
+     entrypoint: ./docker-backup.sh
+     env_file:
+       - secrets.env
+     depends_on:
+       - db
+     restart: always
+
    proxy:
      build: ./proxy/
      volumes:
        - static:/www/static/:ro
        - media:/www/media/:ro
        - ssl:/etc/nginx/ssl
-       - letsencrypt:/etc/letsencrypt
      ports:
        - "80:80"
        - "443:443"
@@ -40,10 +52,10 @@ services:
        - NGINX_HOST=dev.olgart.ru
      depends_on:
        - app
+     restart: always
 
 volumes:
    static:
    media:
    pgdata:
    ssl:
-   letsencrypt:

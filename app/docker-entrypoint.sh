@@ -8,12 +8,12 @@ python3 wait_postgres.py
 
 python3 ./manage.py syncdb --noinput
 
-if [ -f /olgart.json ]; then
-    python3 ./manage.py loaddata /olgart.json
+if [ -f /backup/olgart.json ]; then
+    python3 ./manage.py loaddata /backup/olgart.json
 fi
 
-if [ -d /media_backup ]; then
-    cp -r /media_backup/* /www/media
+if [ -d /backup/media ]; then
+    cp -r /backup/media/* /www/media
 fi
 
 python3 ./manage.py makemessages --all

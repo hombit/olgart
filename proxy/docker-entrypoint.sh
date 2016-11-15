@@ -17,13 +17,12 @@ mv -v /etc/nginx/conf.d/https.conf /tmp/https.conf
     sleep 5
     while :
     do
-        if openssl x509 -checkend 86400 -noout -in /etc/letsencrypt/live/$NGINX_HOST/fullchain.pem; then
+        if openssl x509 -checkend 86400 -noout -in /etc/nginx/ssl/fullchain.pem; then
             echo "Certs are OK"
         else
             echo "Get certs"
-            certbot certonly -t -n --agree-tos --renew-by-default --email "${LE_EMAIL}" --webroot -w /usr/share/nginx/html -d $NGINX_HOST
+            certbot certonly -t -n --agree-tos --renew-by-default --email "${LE_EMAIL}" --webroot -w /usr/share/nginx/html --cert-path=/etc/nginx/ssl/ -d $NGINX_HOST
         fi
-        cp -vf /etc/letsencrypt/live/$NGINX_HOST/*.pem /etc/nginx/ssl/
         cp -vf /tmp/https.conf /etc/nginx/conf.d/https.conf
         nginx -s reload
         sleep 86400
