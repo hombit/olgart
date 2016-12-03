@@ -22,5 +22,5 @@ python3 ./manage.py makemessages --all
 gunicorn \
     --workers 3 \
     --bind 0.0.0.0:8000 \
-    --proxy-allow-from 0.0.0.0 \
+    --proxy-allow-from proxy \
     olgart.wsgi

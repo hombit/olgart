@@ -37,12 +37,21 @@ services:
        - db
      restart: always
 
+   cloudbackup:
+     build: ./cloudbackup/
+     volumes:
+        - ./backup:/backup:ro
+     env_file:
+        - secrets.env
+     restart: always
+
    proxy:
      build: ./proxy/
      volumes:
        - static:/www/static/:ro
        - media:/www/media/:ro
-       - ssl:/etc/nginx/ssl
+       - ssl:/etc/dhparams/
+       - ssl:/etc/letsencrypt
      ports:
        - "80:80"
        - "443:443"
