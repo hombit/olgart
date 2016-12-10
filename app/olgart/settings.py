@@ -111,10 +111,10 @@ USE_L10N = True
 USE_TZ = True
 
 #gettext = lambda s: s
-from django.utils.translation import gettext
+from django.utils.translation import gettext_lazy
 LANGUAGES = (
-    ('ru', gettext('Russian')),
-    ('en', gettext('English')),
+    ('ru', gettext_lazy('Russian')),
+    ('en', gettext_lazy('English')),
 )
 
 LOCALE_PATHS = (
