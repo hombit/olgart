@@ -1,4 +1,4 @@
-FROM python:3.3
+FROM python:3.4
 
 MAINTAINER Konstantin Malanchev <hombit@gmail.com>
 
