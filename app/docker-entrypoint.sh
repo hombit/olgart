@@ -6,6 +6,8 @@ fi
 
 python3 wait_postgres.py
 
+python3 ./manage.py migrate
+
 if [ -f /backup/olgart.json ]; then
     python3 ./manage.py loaddata /backup/olgart.json
 fi
