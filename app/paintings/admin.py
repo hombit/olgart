@@ -39,14 +39,15 @@ class PaintingAdmin(TranslationAdmin):
 					('width', 'height',),
 					'year',
 					'is_sold',
+                    'price',
 					('image', 'get_img_tag_for_admin'),
 				)
 			}
 		),
 	]
 
-	list_display = ('title','get_img_tag_for_admin','gallery','is_sold','position',)
-	list_editable = ('is_sold','position',)
+	list_display = ('title','get_img_tag_for_admin','gallery','is_sold','price','position',)
+	list_editable = ('is_sold','price','position',)
 	list_filter = ('gallery','is_sold',)
 
 	class Media:
