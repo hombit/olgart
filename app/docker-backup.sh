@@ -9,7 +9,7 @@ do
     mkdir -p $BACKUP/$DIR
     
     ./manage.py dumpdata > $BACKUP/$DIR/olgart.json
-    cp -rv /media $BACKUP/$DIR/
+    cp -rv /www/media $BACKUP/$DIR/
 
     if [ -f $BACKUP/olgart.json ]; then
         mkdir -p $BACKUP/orig
