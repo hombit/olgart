@@ -1,4 +1,4 @@
-Django==1.8.17
+Django==1.8.18
 Pillow
 django-modeltranslation
 psycopg2
