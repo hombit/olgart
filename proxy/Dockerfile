@@ -1,4 +1,4 @@
-FROM nginx
+FROM nginx:alpine
 
 MAINTAINER Konstantin Malanchev <hombit@gmail.com>
 
